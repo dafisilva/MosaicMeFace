@@ -1,0 +1,102 @@
+  seta_tras.setVisible(false);
+  seta_frente.setVisible(false);
+  texto1.setVisible(false);
+  video2.setVisible(false);
+  foto_take.setVisible(false);
+  capture.setVisible(false);
+  close.setVisible(false);
+  show1.setVisible(false);
+  personaliza.setVisible(false);
+  gradient1.setVisible(false);
+  gradient2.setVisible(false);
+  gradient3.setVisible(false);
+  gradient4.setVisible(false);
+  gradient5.setVisible(false);
+  gradient6.setVisible(false);
+  mosaico1.setVisible(false);
+  mosaico2.setVisible(false);
+  mosaico3.setVisible(false);
+  mosaico4.setVisible(false);
+  confirmar.setVisible(false);
+  ok.setVisible(false);
+  cancelar.setVisible(false);
+  cancelar1.setVisible(false);
+  nao.setVisible(false);
+  sim.setVisible(false);
+  valor.setVisible(false);
+  cancelar2.setVisible(false);
+  imprimir.setVisible(false);
+  load1.setVisible(false);
+  load2.setVisible(false);
+  load3.setVisible(false);
+  load4.setVisible(false);
+  baixo.setVisible(false);
+  cima.setVisible(false);
+  esquerda.setVisible(false);
+  direita.setVisible(false);
+  concluido.setVisible(false);
+}
+
+public void keyPressed(){
+  if(key=='i' && page==5){
+    page=6;
+    fullScreen();
+    G4P.messagesEnabled(false);
+    G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
+    G4P.setCursor(ARROW);
+    surface.setTitle("Sketch Window");
+    valor.setVisible(false);
+    cancelar2.setVisible(false);
+    if(language.equals("PT")){
+      imprimir.setIcon("/data/imprimir.jpg", 1, GAlign.EAST, GAlign.RIGHT, GAlign.MIDDLE);
+    }
+    else if(language.equals("EN")){
+      imprimir.setIcon("/data/printing.jpg", 1, GAlign.EAST, GAlign.RIGHT, GAlign.MIDDLE);
+    }
+    else if(language.equals("SP")){
+      imprimir.setIcon("/data/imprimiendo.jpg", 1, GAlign.EAST, GAlign.RIGHT, GAlign.MIDDLE);
+    }
+    else if(language.equals("FR")){
+      imprimir.setIcon("/data/imprimer.jpg", 1, GAlign.EAST, GAlign.RIGHT, GAlign.MIDDLE);
+    }
+    load1.setIcon("/data/load1.jpg", 1, GAlign.SOUTH, GAlign.CENTER, GAlign.MIDDLE);
+    load2.setIcon("/data/load2.jpg", 1, GAlign.SOUTH, GAlign.CENTER, GAlign.MIDDLE);
+    load3.setIcon("/data/load3.jpg", 1, GAlign.SOUTH, GAlign.CENTER, GAlign.MIDDLE);
+    load4.setIcon("/data/load4.jpg", 1, GAlign.SOUTH, GAlign.CENTER, GAlign.MIDDLE);
+    load1.setVisible(true);
+    load2.setVisible(true);
+    load3.setVisible(true);
+    load4.setVisible(true);
+    imprimir.setVisible(true);
+  } 
+  if(key=='c' && page==6){
+    page=0;
+    fullScreen();
+    G4P.messagesEnabled(false);
+    G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
+    G4P.setCursor(ARROW);
+    surface.setTitle("Sketch Window");
+    imprimir.setVisible(false);
+    load1.setVisible(false);
+    load2.setVisible(false);
+    load3.setVisible(false);
+    load4.setVisible(false);
+    if(language.equals("PT")){
+      concluido.setIcon("/data/concluido.jpg", 1, GAlign.SOUTH, GAlign.CENTER, GAlign.MIDDLE);
+    }
+    else if(language.equals("EN")){
+      concluido.setIcon("/data/finished.jpg", 1, GAlign.SOUTH, GAlign.CENTER, GAlign.MIDDLE);
+    }
+    else if(language.equals("SP")){
+      concluido.setIcon("/data/terminado.jpg", 1, GAlign.SOUTH, GAlign.CENTER, GAlign.MIDDLE);
+    }
+    else if(language.equals("FR")){
+      concluido.setIcon("/data/fini.jpg", 1, GAlign.SOUTH, GAlign.CENTER, GAlign.MIDDLE);
+    }
+   concluido.setVisible(true);
+   baixo.setVisible(true);
+   cima.setVisible(true);
+   esquerda.setVisible(true);
+   direita.setVisible(true);
+  }
+}
